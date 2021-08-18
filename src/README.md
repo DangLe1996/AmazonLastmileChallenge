@@ -15,25 +15,25 @@ The optimal zone_id sequence is obtained using the decision tree obtained during
 the model build phase, where the model learned the directional biases that drivers
 make for each geographical region. 
 
-##Training Model
+## Training Model
 The files contained in this folder are as follow:
 
-###classifierUtils.py
+### classifierUtils.py
 Functions that build the decision tree classifiers and also using the classifiers
 to output predicted optimal zone_id sequence
 
-###dataset.py
+### dataset.py
 Class ALMCData contains functions to read raw JSON files and store it into 
 a pickle file for quicker re-loading time. It also convert input data into
 different class variables that can be used throughout the program
 
-###exploreParameterMain.py
+### exploreParameterMain.py
 Contains the master master build and apply functions. 
 
-###TSP.py
+### TSP.py
 Calling the Cluster_ATPS code and return the optimal clustered ATSP route. 
 
-###utils.py
+### utils.py
 Contains functions to fix the corrupted zone_id that were given from the 
 competition. 
 
