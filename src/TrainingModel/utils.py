@@ -53,16 +53,5 @@ def check_zone(stops):
     same = np.fromiter((src.zone_id == dst.zone_id for src in stops for dst in stops), dtype=np.int_)
     return same.reshape(len(stops), len(stops))
 
-def check_same_cluster(stops):
-    sameCluster = lambda src, dst: src.zone_id != dst.zone_id and \
-                                   src.zone_id != None and dst.zone_id != None \
-                                   and src.zone_id[-1] == dst.zone_id[-1] \
-                                    and src.zone_id.split('.')[0] == dst.zone_id.split('.')[0]
-
-    same = np.fromiter((sameCluster(src,dst)
-                        for src in stops for dst in stops), dtype=np.int_)
-    return same.reshape(len(stops), len(stops))
-
-
 
 

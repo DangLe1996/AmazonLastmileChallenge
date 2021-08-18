@@ -10,10 +10,6 @@ from sklearn.tree import DecisionTreeClassifier
 
 
 
-
-
-
-
 def getAreaClf(Routes):
     #get routes with only 1 zone change
     trainData = []
@@ -227,55 +223,6 @@ def getSequenceZoneNumber(zoneidlist, direction):
                 sequence.extend(c)
                 result.append(c)
     return result
-    #
-    #
-    # zoneIDsequence = []
-    # indexSequence = []
-    #
-    # test = []
-    # sequenceLen = []
-    # sequenceLen.append(1)
-    # indexSequence.append(route.depot)
-    #
-    #
-    # usedAreas = []
-    # lastNumber = 0
-    # RegionIDSequence = []
-    # for s in regionCodes:
-    #     areas = getRouteArea(route,s, AreaDirection)
-    #     if len(usedAreas) > 0:
-    #         if usedAreas[-1] != areas[0]:
-    #             AreaDirection = not AreaDirection
-    #             areas = getRouteArea(route, s, AreaDirection)
-    #     test.extend(areas)
-    #     for a in areas:
-    #         zones, indexList, zoneReverse, lastNumber, zoneIDCount = getRouteZone(route,s,a, zoneReverse, lastNumber)
-    #         RegionIDSequence.append(s + a)
-    #         usedAreas.append(a)
-    #         zoneIDsequence.extend( zones)
-    #         indexSequence.extend(indexList)
-    #         sequenceLen.extend(zoneIDCount)
-    #     AreaDirection = not AreaDirection
-    #
-    # indexSequence.append(route.depot)
-    # sequenceLen.append(1)
-    #
-    # assert (sum(sequenceLen) == len(indexSequence))
-    # # with open(f'{route.id}.csv', 'a', newline='') as f:
-    # #     write = csv.writer(f)
-    # #     write.writerow(zoneIDsequence)
-    #
-    # return zoneIDsequence, sequenceLen,indexSequence, RegionIDSequence
-
-
-
-
-
-
-
-
-
-
 
 
 
